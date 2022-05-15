@@ -129,7 +129,7 @@ if(prog!=5 )
 {       pflag=0;
         let str=document.getElementById("stren");str.style.overflow= "visible";
         str.style.width="100%";
-        str.style.height="450%";     
+        str.style.height="450%";  
 }
 
 
