@@ -166,6 +166,7 @@ function sub()
     }
     if(nflag==0)
     {
+<<<<<<< HEAD
         alert("Phone number not valid enter a valid number accept additional 3 formats: XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX .X in digits");
        
     }alert("Try again");
