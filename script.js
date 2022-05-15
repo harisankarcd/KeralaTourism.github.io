@@ -23,7 +23,7 @@ return true;}
 function nvalid()
 {
     let  number=document.getElementById("number");  
-    let nregexp=/^(((\d{3})\-(\d{3})\-(\d{4}))|(\d{10})|((\d{3}) (\d{3}) (\d{4})))$/;
+    let nregexp=/^(((\d{3})\-(\d{3})\-(\d{4}))|(\d{10})|((\d{3}) (\d{3}) (\d{4}))|((\d{3}).(\d{3}).(\d{4})))$/;
     console.log(number.value);
     if(nregexp.test(number.value)){
     number.setAttribute("style", "border:yellowgreen solid 2px")  
@@ -166,8 +166,7 @@ function sub()
     }
     if(nflag==0)
     {
-<<<<<<< HEAD
-        alert("Phone number not valid enter a valid number accept additional 3 formats: XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX .X in digits");
+        alert("Phone number not valid enter a valid number accept additional 3 formats: XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX,XXXXXXXXXX. X in digits ");
        
     }alert("Try again");
      return false;
