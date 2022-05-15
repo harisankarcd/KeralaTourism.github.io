@@ -6,6 +6,7 @@
 <link rel="icon" type="image/x-icon" href="./res/kerala tourism logo head.png">
 <link rel="stylesheet" href="style.css">
 <title>Kerala Tourism</title>
+
 </head>
 <style>
   .bo{
@@ -42,27 +43,29 @@
         <div class="row">
           <div class="col-4"></div>
           <div class="col-3 bo  mt-5 border border-1 border-secondary p-5 rounded bg-light ">
-            <form>
+            <form onsubmit=" return sub()" action="./home.html">
               <div class="mb-3 ">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1" class="form-label" required >Email address</label>
+                
+                <input id="email" oninput="evalid()" class="form-control"  type="email"><br>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" oninput="pvalid()" class="form-control" id="password">
               </div>
               <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" required id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
               </div>
               
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" onsubmit="return sub()" class="btn btn-primary">Submit</button>
               <h6 style="margin-top: 10%;">Don't have an account? <a  style="color: royalblue;" href="signup.html">Register here</a></h6>
               <a style="color: royalblue;" href="#">Forgot password?</a>
             </form>
           </div>
         </div>
       </div>
+      <script src="script2.js"></script>
 </body>
 </html>

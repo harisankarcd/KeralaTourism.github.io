@@ -5,6 +5,71 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <link rel="icon" type="image/x-icon" href="./res/kerala tourism logo head.png">
 <link rel="stylesheet" href="style.css">
+<style>
+  #mail{
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+input{
+  border-radius: 4%;
+}
+#strength{
+    /* visibility: hidden; */
+  
+  padding: 0;
+  border: 1px black solid;
+}
+#stren{
+    position: relative;
+    overflow:hidden; 
+    width: 0px;
+    height:0px;
+    font-size: 50%;
+    font-weight: bold;
+}
+
+.bar1{
+   position: relative;
+   /* width: 76%; */
+    padding: 0; 
+    height: 3vh;
+   margin-left: 4%;
+    background-color: whitesmoke;
+ 
+    border-radius: 7px;
+}
+
+#progress{position: relative;
+  
+   
+    background-color: whitesmoke;
+    
+    width:0%;
+    background-color: green;
+    height:100%;
+    border-radius: 7px;
+    /* animation: go 5s ; */
+}
+p{position: relative;
+    color: red;
+    line-height: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20%;
+   font-size-adjust: 1.2vw;
+    width:200px;
+    
+}
+p::before{
+  content: '- ';
+}
+#number{
+  position: relative;
+  border-radius:3px;
+  border: none;
+ 
+}
+</style>
 <title>Kerala Tourism</title>
 </head>
 <body background="./res/back5.png">
@@ -38,27 +103,42 @@
           <div class="col-md-3 not"></div>
          
            <div class="col-5   p-5 rounded">
-            <form class="row g-3">
-              <div class="col-md-6">
+            <form class="row g-3" action="./login.html" onsubmit=" return sub()"  >
+              <div class="col-md-10">
                 <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
+            
+                <input id="email" oninput="evalid()" class="form-control"  type="email"><br>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-10">
                 <label for="inputPassword4" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <input type="password" id="password"  onfocus="show()" onfocusout="noshow()" oninput="pvalid()" placeholder="password" class="form-control" >
               </div>
+              <div class="bar1 col-md-9">
+                <div id="progress">
+             </div></div>
+              <div id="stren">
+              <p id="upper">Should have a Uppercase</p>
+              <p id="lower">Should have a Lowercase </p>
+              <p id="symbol">Should have a symbol</p>
+              <p id="l"> Minimum length 8</p>
+              <p id="pnumber">Should have a number</p>
+          </div>
+          <label for="number" >Number</label><br>
+          <input type="text" oninput="nvalid()" name="" class="form-label" id="number">
+          <br>
+       
               <div class="col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <label for="inputAddress"  class="form-label" required>Address</label>
+                <input type="text" required class="form-control" id="inputAddress" placeholder="1234 Main St">
               </div>
              
               <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
+                <label for="inputCity"  class="form-label">City</label>
+                <input type="text" required class="form-control" id="inputCity">
               </div>
               <div class="col-md-6">
                 <label for="inputState" class="form-label">District</label>
-                <select id="inputState" class="form-select">
+                <select id="inputState" required class="form-select">
                   <option selected disabled>Choose One ...</option>
                   <option >Alapuzha</option>
                   <option >Ernakulam</option>
@@ -80,18 +160,18 @@
              
               <div class="col-md-4">
                 <label for="inputZip" class="form-label">Pin</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input type="text" required class="form-control" id="inputZip">
               </div>
               <div class="col-12">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <input class="form-check-input" required type="checkbox" id="gridCheck">
                   <label class="form-check-label" for="gridCheck">
                     Check me out
                   </label>
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary ">Sign in</button>
+                <button type="submit" onsubmit="sub()" class="btn btn-primary ">Sign in</button>
               </div>
               <h6 style="margin-top: 10%;">Already have an account? <a  style="color: royalblue;" href="login.html">log in</a></h6>
             </form>
@@ -100,5 +180,6 @@
           <div class="col-2"></div>
         </div>
       </div> 
+      <script src="./script.js"></script>
 </body>
 </html>
